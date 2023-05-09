@@ -328,14 +328,15 @@ section {
 .noto-sans {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  /* width: 50%; */
+  align-items: center;
 }
 
 .typography {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 .lexend {
@@ -369,10 +370,12 @@ section {
   color: var(--slate-neutral-900);
   width: 50%;
   padding: 1rem 0;
+
+  text-align: center;
 }
 
 .font-size {
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .font-size span {
@@ -388,7 +391,7 @@ section {
 .font-size span:nth-child(3n-2) {
   color: var(--slate-neutral-800);
   font-weight: 600;
-  padding: 0.5rem 0;
+  padding: 1.2rem 0 0.2rem 0;
 }
 
 #text-xs {
@@ -450,22 +453,22 @@ section {
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 3rem;
+  padding: 3rem 0;
   justify-content: center;
   background-color: var(--blue-violet-100);
   border-radius: 16px;
-  margin: 0 auto;
+  margin: 2rem 0;
 }
 
 .elevation div {
-  margin: 1rem;
-  background-color: white;
-  color: var(--blue-violet-500);
-  width: 160px;
-  height: 128px;
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
+  background-color: white;
+  color: var(--blue-violet-500);
+  height: 128px;
   border-radius: 6px;
 }
 
@@ -493,6 +496,10 @@ section {
     0px 4px 6px -4px rgba(45, 39, 68, 0.05);
 }
 
+.component-gallery{
+    padding: 2rem 0;
+}
+
 button {
   padding: 15px 47px;
   border-radius: 10px;
@@ -506,7 +513,8 @@ button {
   margin: 1rem;
 }
 
-.primary-button {
+.primary-button, 
+.example-button {
   background-color: var(--blue-violet-900);
   color: white;
   border: 2px solid var(--blue-violet-900);
@@ -537,42 +545,73 @@ button {
   border: 2px solid var(--blue-violet-400);
 }
 
-.primary-button:hover {
+.example-button:hover {
   background-color: var(--blue-violet-950);
   color: white;
   border: 2px solid var(--blue-violet-950);
 }
 
-.primary-button:focus,
-.primary-button:active {
+.example-button:focus,
+.example-button:active {
   background-color: var(--blue-violet-900);
   color: white;
   border: 2px solid var(--blue-violet-400);
 }
 
-input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: white;
-  border: 2px solid var(--blue-violet-900);
-  border-radius: 10px;
-  padding: 0.5rem 2rem;
-  margin: 0;
-  box-sizing: border-box;
-  box-shadow: inset 0px 4px 3px rgba(135, 139, 211, 0.2);
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  margin-left: 2rem;
-
-}
 label {
   display: block;
   font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: var(--blue-violet-900);
-  margin-left: 2rem;
+  margin: 1rem 1rem 0 1rem;
   padding-left: 0.5rem;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    border: 2px solid var(--blue-violet-900);
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 2px rgba(135, 139, 211, 0.2);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.breadcrumb ul {
+  display: flex;
+}
+
+.breadcrumb li {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumb a {
+  display: flex;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--blue-violet-400);
+  margin: 0 1rem;
+}
+
+.breadcrumb svg {
+  fill: var(--blue-violet-400);
+  width: 1.5rem;
+}
+
+.breadcrumb li:last-of-type a {
+  color: var(--blue-violet-900);
+  font-weight: 600;
 }
